@@ -58,7 +58,7 @@ RUN cd swift-corelibs-libdispatch && \
     git submodule init && \
     git submodule update && \
     sh ./autogen.sh && \ 
-    ./configure && \
+    ./configure --with-swift-toolchain=/$swift_version-ubuntu15.10/usr --prefix=/$swift_version-ubuntu15.10/usr && \
     make && \
     make install
 
@@ -74,5 +74,32 @@ RUN cd pcre2-10.20 && \
     make && \
     make install
 
+# Install VNC and other useful tools
+RUN apt-get install -y \
+    vim \
+    x11vnc \
+    xvfb 
 
+# Install JDK
+RUN apt-get install -y \
+    openjdk-8-jre \
+    openjdk-8-jre-headless \
+    openjdk-8-jdk
 
+## Install Clion
+RUN wget http://download.jetbrains.com/cpp/CLion-145.184.4.tar.gz
+RUN wget http://download.jetbrains.com/cpp/clion-swift-145.184.4.jar
+RUN tar xzf CLion-145.184.4.tar.gz
+
+# Setup VNC
+RUN mkdir ~/.vnc
+RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
+
+# Setup work environment
+RUN mkdir project
+WORKDIR /project
+
+# Start VNC by default
+# CMD rm -r -f Packages .build && bash build.sh && 
+CMD cd .. && x11vnc -forever -usepw -create && /bin/bash
+# && cd clion-145.184.4/bin && ./clion.sh

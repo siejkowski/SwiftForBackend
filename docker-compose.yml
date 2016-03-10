@@ -1,0 +1,13 @@
+version: '2'
+services:
+  app:
+    image: siejkowski/swift-for-backend-kitura-sample
+    ports:
+      - "5900:5900"
+      - "8080:8080"
+    volumes:
+      - .:/swift-for-backend
+    depends_on:
+      - couchdb
+  couchdb:
+    image: couchdb

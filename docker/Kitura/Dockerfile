@@ -74,11 +74,20 @@ RUN cd pcre2-10.20 && \
     make && \
     make install
 
+## Install Clion
+RUN wget http://download.jetbrains.com/cpp/CLion-145.184.4.tar.gz
+RUN wget http://download.jetbrains.com/cpp/clion-swift-145.184.4.jar
+RUN tar xzf CLion-145.184.4.tar.gz
+
 # Install VNC and other useful tools
 RUN apt-get install -y \
     vim \
     x11vnc \
     xvfb 
+
+# Setup VNC
+RUN mkdir ~/.vnc
+RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
 
 # Install JDK
 RUN apt-get install -y \
@@ -86,20 +95,13 @@ RUN apt-get install -y \
     openjdk-8-jre-headless \
     openjdk-8-jdk
 
-## Install Clion
-RUN wget http://download.jetbrains.com/cpp/CLion-145.184.4.tar.gz
-RUN wget http://download.jetbrains.com/cpp/clion-swift-145.184.4.jar
-RUN tar xzf CLion-145.184.4.tar.gz
-
-# Setup VNC
-RUN mkdir ~/.vnc
-RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
+## Setup Clion
+COPY clion_start.sh /clion_start.sh
+RUN chmod +xX /clion_start.sh
 
 # Setup work environment
 RUN mkdir project
 WORKDIR /project
 
 # Start VNC by default
-# CMD rm -r -f Packages .build && bash build.sh && 
-CMD cd .. && x11vnc -forever -usepw -create && /bin/bash
-# && cd clion-145.184.4/bin && ./clion.sh
+CMD rm -r -f Packages .build && cd .. && x11vnc -clip 1280x800+0+0 -forever -usepw -create 

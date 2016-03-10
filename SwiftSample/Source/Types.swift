@@ -5,5 +5,5 @@ class BaseClass {
 }
 
 class SomeClass : BaseClass {
-    
+
 }

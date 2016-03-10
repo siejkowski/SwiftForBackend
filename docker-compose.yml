@@ -11,3 +11,5 @@ services:
       - couchdb
   couchdb:
     image: couchdb
+    expose:
+      - "5984"

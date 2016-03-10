@@ -11,9 +11,13 @@ import KituraMustache
 
 Log.logger = HeliumLogger()
 
-let router = provideRouter()
+let database = connectToDatabase { database in
+    let router = provideRouter(database)
 
-let server = HttpServer.listen(8080, delegate: router)
+    let server = HttpServer.listen(8080, delegate: router)
 
-Server.run()
+    Server.run()
+}
+
+
 

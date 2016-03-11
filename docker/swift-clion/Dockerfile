@@ -9,6 +9,7 @@ ARG swift_version=swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a
 RUN apt-get update && \
     apt-get install -y \
     wget \
+    curl \
     clang \
     libicu-dev \
     libpython2.7

@@ -67,6 +67,7 @@ func provideRouter(database: Database) -> Router {
             try! toukResponse?.readAllData(data)
             let stringData = String(data: data, encoding: NSUTF8StringEncoding)
             let json = JSON(data: data)
+            Log.info("json: \(json)")
             guard let avatar = json["avatar_url"].string
             else {
                 response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).forceEnd()

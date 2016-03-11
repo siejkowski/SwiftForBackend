@@ -54,9 +54,20 @@ func provideRouter(database: Database) -> Router {
     }
     .get("/logo") { (request: RouterRequest, response: RouterResponse, next) in
         defer { next() }
-        let req = Http.request("https://api.github.com/users/touk") { (toukResponse: ClientResponse?) in
-            guard let jsonString = try! toukResponse?.readString(),
-                  let avatar = JSON(jsonString)["avatar_url"].string
+        let requestOptions: [ClientRequestOptions] = [
+                .Schema("https://"),
+                .Hostname("api.github.com"),
+                .Port(443),
+                .Path("/users/touk"),
+                .Method("GET"),
+                .Headers(["User-Agent": "touk"])
+        ]
+        let req = Http.request(requestOptions) { (toukResponse: ClientResponse?) in
+            let data = NSMutableData()
+            try! toukResponse?.readAllData(data)
+            let stringData = String(data: data, encoding: NSUTF8StringEncoding)
+            let json = JSON(data: data)
+            guard let avatar = json["avatar_url"].string
             else {
                 response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).forceEnd()
                 return

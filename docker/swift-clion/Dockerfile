@@ -57,9 +57,9 @@ RUN cd swift-corelibs-libdispatch && \
     make install
 
 ## Install Clion
-RUN wget http://download.jetbrains.com/cpp/CLion-145.184.4.tar.gz
-RUN wget http://download.jetbrains.com/cpp/clion-swift-145.184.4.jar
-RUN tar xzf CLion-145.184.4.tar.gz
+RUN wget http://download.jetbrains.com/cpp/CLion-145.256.37.tar.gz
+RUN wget http://download.jetbrains.com/cpp/clion-swift-145.256.37.jar
+RUN tar xzf CLion-145.256.37.tar.gz
 
 # Install VNC and other useful tools
 RUN apt-get install -y \

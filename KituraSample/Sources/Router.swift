@@ -41,7 +41,7 @@ func provideRouter(database: Database) -> Router {
             }
         }
     }
-    .get("/html/:name") { (request: RouterRequest, response: RouterResponse, next) in
+    .get("/html/:name?") { (request: RouterRequest, response: RouterResponse, next) in
         defer { next() }
         do {
             let name = request.params["name"] ?? "Swift"
@@ -51,6 +51,24 @@ func provideRouter(database: Database) -> Router {
                 try response.send(template.render(Box(dictionary: ["name": name]))).end()
             }
         } catch {}
+    }
+    .get("/logo") { (request: RouterRequest, response: RouterResponse, next) in
+        defer { next() }
+        let req = Http.request("https://api.github.com/users/touk") { (toukResponse: ClientResponse?) in
+            guard let jsonString = try! toukResponse?.readString(),
+                  let avatar = JSON(jsonString)["avatar_url"].string
+            else {
+                response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).forceEnd()
+                return
+            }
+            let req = Http.request(avatar) { (avatarResponse: ClientResponse?) in
+                let data = NSMutableData()
+                try! avatarResponse?.readAllData(data)
+                response.status(HttpStatusCode.OK).sendData(data).forceEnd()
+            }
+            req.end()
+        }
+        req.end()
     }
 }
 

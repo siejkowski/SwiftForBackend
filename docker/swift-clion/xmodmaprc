@@ -1,0 +1,10 @@
+keycode 8 = Alt_L
+keycode 64 = Meta_L
+keycode 204 = Meta_L
+clear mod1
+clear mod2
+clear mod3
+clear mod4
+clear mod5
+add mod1 = Alt_L
+add mod4 = Meta_L

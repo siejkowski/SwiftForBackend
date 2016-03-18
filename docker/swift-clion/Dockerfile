@@ -59,13 +59,18 @@ RUN cd swift-corelibs-libdispatch && \
 ## Install Clion
 RUN wget http://download.jetbrains.com/cpp/CLion-145.256.37.tar.gz
 RUN wget http://download.jetbrains.com/cpp/clion-swift-145.256.37.jar
+RUN wget -O ideavim.plugin.zip "https://plugins.jetbrains.com/plugin/download?pr=objc&updateId=22030"
 RUN tar xzf CLion-145.256.37.tar.gz
 
 # Install VNC and other useful tools
 RUN apt-get install -y \
     vim \
     x11vnc \
-    xvfb 
+    xvfb \
+    x11-xserver-utils \
+    unzip
+
+RUN unzip ideavim.plugin.zip
 
 # Setup VNC
 RUN mkdir ~/.vnc
@@ -79,9 +84,11 @@ RUN apt-get install -y \
 
 ## Setup Clion
 COPY clion_start.sh /clion_start.sh
+COPY xmodmaprc /xmodmaprc
 RUN chmod +xX /clion_start.sh
 
+RUN echo "xmodmap /xmodmaprc" >> /root/.bashrc
 RUN echo "./clion_start.sh" >> /root/.bashrc
 
 # Start VNC by default
-CMD x11vnc -clip 1280x800+0+0 -forever -usepw -create 
+CMD x11vnc -clip 1280x800+0+0 -repeat -modtweak -xkb -remap Meta_L-Alt_L,Alt_L-Meta_L -forever -usepw -create 

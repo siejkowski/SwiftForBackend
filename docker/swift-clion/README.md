@@ -4,8 +4,8 @@ It consists of:
 1. Dependencies for Swift for Linux and swift-corelibs-libdispatch
 2. Swift for Linux (currently swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a)
 3. swift-corelibs-libdispatch
-4. Jetbrains IDE: CLion-145.256.37 (2016.1 RC) EAP (with Open JDK 8)
-5. Jetbrains Swift plugin for CLion-145.256.37 EAP
+4. Jetbrains IDE: CLion-2016.1 (145.258.14) (with Open JDK 8)
+5. Jetbrains Swift plugin for CLion-145.258.14
 6. VNC (x11vnc)
 
 On launch, the default configuration ensures that:

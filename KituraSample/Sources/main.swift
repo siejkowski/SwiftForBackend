@@ -19,6 +19,3 @@ connectToDatabase { database in
 
     Server.run()
 }
-
-
-

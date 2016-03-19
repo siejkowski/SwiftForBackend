@@ -4,6 +4,9 @@ MAINTAINER Krzysztof Siejkowski (github.com/siejkowski)
 WORKDIR /
 
 ARG swift_version=swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a
+ARG clion_version=2016.1
+# 145.256.37
+# 2016.1
 
 # Install Swift dependencies
 RUN apt-get update && \
@@ -57,10 +60,13 @@ RUN cd swift-corelibs-libdispatch && \
     make install
 
 ## Install Clion
-RUN wget http://download.jetbrains.com/cpp/CLion-145.256.37.tar.gz
-RUN wget http://download.jetbrains.com/cpp/clion-swift-145.256.37.jar
+RUN wget http://download.jetbrains.com/cpp/CLion-$clion_version.tar.gz
 RUN wget -O ideavim.plugin.zip "https://plugins.jetbrains.com/plugin/download?pr=objc&updateId=22030"
-RUN tar xzf CLion-145.256.37.tar.gz
+RUN wget -O clion-swift-$clion_version.jar "https://plugins.jetbrains.com/plugin/download?pr=objc&updateId=24729"
+# 256.37 => 24576
+# 257.16 => 24671
+# 258.14 => 24729
+RUN tar xzf CLion-$clion_version.tar.gz
 
 # Install VNC and other useful tools
 RUN apt-get install -y \

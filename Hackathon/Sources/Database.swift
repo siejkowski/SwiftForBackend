@@ -43,7 +43,7 @@ extension Database {
 
     private var databaseErrorDomain: String { get { return "CouchDBDomain" }}
 
-    public func retrieveAll(callback: (JSON?, NSError?) -> ()) {
+    public func                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 retrieveAll(callback: (JSON?, NSError?) -> ()) {
         let requestOptions: [ClientRequestOptions] = [
                 .Hostname(connProperties.hostName),
                 .Port(connProperties.port),
@@ -60,6 +60,7 @@ extension Database {
         }
         req.end()
     }
+
 
     func processResponse(response: ClientResponse?, @noescape callback: (JSON?, NSError?) -> ()) {
         var error: NSError?

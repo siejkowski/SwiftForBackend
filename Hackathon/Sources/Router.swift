@@ -12,6 +12,33 @@ func provideRouter(database: Database) -> Router {
     return Router()
     .use("/*", middleware: BodyParser())
     .use("/*", middleware: StaticFileServer())
+
+    .get("/slack") { _, response, next in
+        let slackApiToken = "xoxb-29685368228-tkILhjUEkq3F6qSBahe0Kw1W"
+        let requestOptions: [ClientRequestOptions] = [
+                .Schema("https://"),
+                .Hostname("slack.com"),
+                .Port(443),
+                .Path("/api/rtm.start"),
+                .Method("POST"),
+                .Headers(["User-Agent": "*"])
+        ]
+        let req = Http.request(requestOptions) { (clientResponse: ClientResponse?) in
+            guard let clientResponse = clientResponse else {
+                response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).forceEnd()
+                return
+            }
+            let data = NSMutableData()
+            try! clientResponse.readAllData(data)
+            let string = String(data: data, encoding: NSUTF8StringEncoding)!
+            let stringData = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
+            let json = JSON(data: stringData)
+            let url = json["url"].stringValue
+            response.send(url).status(HttpStatusCode.OK).forceEnd()
+        }
+        req.end("token=\(slackApiToken)&simple_latest=true&no_unreads=true")
+    }
+
     .get("/hello") { _, response, next in
         defer { next() }
         response.setHeader("Content-Type", value: "text/plain; charset=utf-8")

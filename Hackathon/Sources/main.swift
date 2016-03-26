@@ -8,8 +8,6 @@ import HeliumLogger
     import Glibc
 #endif
 
-print("hello touk!")
-
 Log.logger = HeliumLogger()
 
 connectToDatabase { database in

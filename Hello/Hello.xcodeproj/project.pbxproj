@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4649C74C1CA44B2600316809 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649C74B1CA44B2600316809 /* main.swift */; };
 		46FA30081CA491D7007B0D52 /* index.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46FA30061CA48F0E007B0D52 /* index.html */; };
+		46FA30101CA58874007B0D52 /* HelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FA300F1CA58874007B0D52 /* HelloTests.swift */; };
+		46FA30171CA5901C007B0D52 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649C74B1CA44B2600316809 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,13 @@
 			remoteGlobalIDString = 6D9CABFD18E5714F77C7CC79;
 			remoteInfo = Mustache;
 		};
+		46FA30121CA58874007B0D52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4649DEA71CA4370A0061578F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4649DEAD1CA4370A0061578F;
+			remoteInfo = Hello;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -142,10 +151,20 @@
 		4649DEB31CA4370A0061578F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46FA2FF61CA48CD5007B0D52 /* Mustache.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mustache.xcodeproj; path = Hello/Zewo/Mustache/XcodeDevelopment/Mustache.xcodeproj; sourceTree = "<group>"; };
 		46FA30061CA48F0E007B0D52 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = Resources/index.html; sourceTree = "<group>"; };
+		46FA300D1CA58874007B0D52 /* HelloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46FA300F1CA58874007B0D52 /* HelloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloTests.swift; sourceTree = "<group>"; };
+		46FA30111CA58874007B0D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4649DEAC1CA4370A0061578F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FA300A1CA58874007B0D52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,6 +227,7 @@
 				46497C721CA439B3003B6F29 /* Router.xcodeproj */,
 				46497C431CA439A2003B6F29 /* HTTPServer.xcodeproj */,
 				4649DEB01CA4370A0061578F /* Hello */,
+				46FA300E1CA58874007B0D52 /* HelloTests */,
 				4649DEAF1CA4370A0061578F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -216,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				4649DEAE1CA4370A0061578F /* Hello.app */,
+				46FA300D1CA58874007B0D52 /* HelloTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,6 +268,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		46FA300E1CA58874007B0D52 /* HelloTests */ = {
+			isa = PBXGroup;
+			children = (
+				46FA300F1CA58874007B0D52 /* HelloTests.swift */,
+				46FA30111CA58874007B0D52 /* Info.plist */,
+			);
+			path = HelloTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +302,24 @@
 			productReference = 4649DEAE1CA4370A0061578F /* Hello.app */;
 			productType = "com.apple.product-type.application";
 		};
+		46FA300C1CA58874007B0D52 /* HelloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46FA30141CA58874007B0D52 /* Build configuration list for PBXNativeTarget "HelloTests" */;
+			buildPhases = (
+				46FA30091CA58874007B0D52 /* Sources */,
+				46FA300A1CA58874007B0D52 /* Frameworks */,
+				46FA300B1CA58874007B0D52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46FA30131CA58874007B0D52 /* PBXTargetDependency */,
+			);
+			name = HelloTests;
+			productName = HelloTests;
+			productReference = 46FA300D1CA58874007B0D52 /* HelloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,6 +331,9 @@
 				ORGANIZATIONNAME = "Krzysztof Siejkowski";
 				TargetAttributes = {
 					4649DEAD1CA4370A0061578F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					46FA300C1CA58874007B0D52 = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
@@ -322,6 +373,7 @@
 			projectRoot = "";
 			targets = (
 				4649DEAD1CA4370A0061578F /* Hello */,
+				46FA300C1CA58874007B0D52 /* HelloTests */,
 			);
 		};
 /* End PBXProject section */
@@ -399,12 +451,31 @@
 		};
 /* End PBXReferenceProxy section */
 
+/* Begin PBXResourcesBuildPhase section */
+		46FA300B1CA58874007B0D52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4649DEAB1CA4370A0061578F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4649C74C1CA44B2600316809 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FA30091CA58874007B0D52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46FA30171CA5901C007B0D52 /* main.swift in Sources */,
+				46FA30101CA58874007B0D52 /* HelloTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +506,11 @@
 			isa = PBXTargetDependency;
 			name = Mustache;
 			targetProxy = 46FA30031CA48CDA007B0D52 /* PBXContainerItemProxy */;
+		};
+		46FA30131CA58874007B0D52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4649DEAD1CA4370A0061578F /* Hello */;
+			targetProxy = 46FA30121CA58874007B0D52 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -541,6 +617,31 @@
 			};
 			name = Release;
 		};
+		46FA30151CA58874007B0D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HelloTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.siejkowski.HelloTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		46FA30161CA58874007B0D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HelloTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.siejkowski.HelloTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -561,6 +662,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		46FA30141CA58874007B0D52 /* Build configuration list for PBXNativeTarget "HelloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46FA30151CA58874007B0D52 /* Debug */,
+				46FA30161CA58874007B0D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

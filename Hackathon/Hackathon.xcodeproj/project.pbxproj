@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4686E4021CA9245F0040CE03 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686E4011CA9245F0040CE03 /* main.swift */; };
-		4686E4381CA9257E0040CE03 /* index.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4686E4291CA924FF0040CE03 /* index.html */; };
+		4686E47E1CA92BB20040CE03 /* index.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4686E47C1CA92B990040CE03 /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,7 +175,7 @@
 			dstPath = public;
 			dstSubfolderSpec = 16;
 			files = (
-				4686E4381CA9257E0040CE03 /* index.html in CopyFiles */,
+				4686E47E1CA92BB20040CE03 /* index.html in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,8 +193,8 @@
 		4686E4041CA924850040CE03 /* Mustache.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mustache.xcodeproj; path = Hackathon/Zewo/Mustache/XcodeDevelopment/Mustache.xcodeproj; sourceTree = "<group>"; };
 		4686E40D1CA924BC0040CE03 /* HTTPFile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HTTPFile.xcodeproj; path = Hackathon/Zewo/HTTPFile/XcodeDevelopment/HTTPFile.xcodeproj; sourceTree = "<group>"; };
 		4686E41B1CA924CA0040CE03 /* HTTPJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HTTPJSON.xcodeproj; path = Hackathon/Zewo/HTTPJSON/XcodeDevelopment/HTTPJSON.xcodeproj; sourceTree = "<group>"; };
-		4686E4291CA924FF0040CE03 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = Resources/index.html; sourceTree = "<group>"; };
 		4686E4391CA926410040CE03 /* Router.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Router.xcodeproj; path = Hackathon/Zewo/Router/XcodeDevelopment/Router.xcodeproj; sourceTree = "<group>"; };
+		4686E47C1CA92B990040CE03 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = public/index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,7 +243,7 @@
 		4686E3281CA91DD70040CE03 /* Hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				4686E42A1CA925030040CE03 /* Resources */,
+				4686E47D1CA92B9E0040CE03 /* public */,
 				4686E4031CA924630040CE03 /* Sources */,
 				4686E32B1CA91DD70040CE03 /* Info.plist */,
 			);
@@ -320,14 +320,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4686E42A1CA925030040CE03 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				4686E4291CA924FF0040CE03 /* index.html */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		4686E43A1CA926410040CE03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +327,14 @@
 				4686E44D1CA926410040CE03 /* Router-Test.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4686E47D1CA92B9E0040CE03 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				4686E47C1CA92B990040CE03 /* index.html */,
+			);
+			name = public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

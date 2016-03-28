@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A5675FDB1F48AED77C9D15395CAFA3024284B390",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A5675FDB1F48AED77C9D15395CAFA3024284B390" : 0,
+    "E2306DAE0C98D148736A05084B6FAB44F03B4909" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "11C0BBE8-A0C9-4388-99A7-14F6AAAB15ED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A5675FDB1F48AED77C9D15395CAFA3024284B390" : "SwiftForBackend\/",
+    "E2306DAE0C98D148736A05084B6FAB44F03B4909" : "SwiftForBackend\/Hello\/Perfect\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Hello",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Hello\/Hello.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:siejkowski\/SwiftForBackend.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5675FDB1F48AED77C9D15395CAFA3024284B390"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PerfectlySoft\/Perfect.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2306DAE0C98D148736A05084B6FAB44F03B4909"
+    }
+  ]
+}

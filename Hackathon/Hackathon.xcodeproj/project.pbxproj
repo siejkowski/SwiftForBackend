@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4686E4021CA9245F0040CE03 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686E4011CA9245F0040CE03 /* main.swift */; };
 		4686E47E1CA92BB20040CE03 /* index.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4686E47C1CA92B990040CE03 /* index.html */; };
-		46D77E881CA9A33D007B8435 /* HackathonApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D77E871CA9A33D007B8435 /* HackathonApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46D77E8F1CA9A33D007B8435 /* HackathonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D77E851CA9A33D007B8435 /* HackathonApp.framework */; };
-		46D77EA31CA9A413007B8435 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB6B661CA9811A00EB5D53 /* Routing.swift */; };
-		46D77EA41CA9A413007B8435 /* Slacking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB6B681CA9888100EB5D53 /* Slacking.swift */; };
-		46D77EA61CA9A41D007B8435 /* HackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB6AFE1CA97FB800EB5D53 /* HackathonTests.swift */; };
+		46D77EBE1CA9B57D007B8435 /* Githubing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D77EBA1CA9B57D007B8435 /* Githubing.swift */; };
+		46D77EBF1CA9B57D007B8435 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46D77EBB1CA9B57D007B8435 /* Info.plist */; };
+		46D77EC01CA9B57D007B8435 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D77EBC1CA9B57D007B8435 /* Routing.swift */; };
+		46D77EC11CA9B57D007B8435 /* Slacking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D77EBD1CA9B57D007B8435 /* Slacking.swift */; };
+		46D77EC31CA9B61D007B8435 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D77EC21CA9B61D007B8435 /* main.swift */; };
+		46D77EC91CA9B96F007B8435 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46D77EC81CA9B96F007B8435 /* Info.plist */; };
+		46D77ECC1CA9B981007B8435 /* HackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D77ECA1CA9B981007B8435 /* HackathonTests.swift */; };
+		46D77ECD1CA9B981007B8435 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46D77ECB1CA9B981007B8435 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,26 +205,27 @@
 
 /* Begin PBXFileReference section */
 		4686E3261CA91DD70040CE03 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4686E32B1CA91DD70040CE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4686E3301CA91DD70040CE03 /* HackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4686E3341CA91DD70040CE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4686E3A21CA924240040CE03 /* HTTPServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HTTPServer.xcodeproj; path = Hackathon/Zewo/HTTPServer/XcodeDevelopment/HTTPServer.xcodeproj; sourceTree = "<group>"; };
 		4686E3C41CA9243A0040CE03 /* WebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WebSocket.xcodeproj; path = Hackathon/Zewo/WebSocket/XcodeDevelopment/WebSocket.xcodeproj; sourceTree = "<group>"; };
 		4686E3F11CA9244E0040CE03 /* LogMiddleware.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LogMiddleware.xcodeproj; path = Hackathon/Zewo/LogMiddleware/XcodeDevelopment/LogMiddleware.xcodeproj; sourceTree = "<group>"; };
-		4686E4011CA9245F0040CE03 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/main.swift; sourceTree = "<group>"; };
 		4686E4041CA924850040CE03 /* Mustache.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mustache.xcodeproj; path = Hackathon/Zewo/Mustache/XcodeDevelopment/Mustache.xcodeproj; sourceTree = "<group>"; };
 		4686E40D1CA924BC0040CE03 /* HTTPFile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HTTPFile.xcodeproj; path = Hackathon/Zewo/HTTPFile/XcodeDevelopment/HTTPFile.xcodeproj; sourceTree = "<group>"; };
 		4686E41B1CA924CA0040CE03 /* HTTPJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HTTPJSON.xcodeproj; path = Hackathon/Zewo/HTTPJSON/XcodeDevelopment/HTTPJSON.xcodeproj; sourceTree = "<group>"; };
 		4686E4391CA926410040CE03 /* Router.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Router.xcodeproj; path = Hackathon/Zewo/Router/XcodeDevelopment/Router.xcodeproj; sourceTree = "<group>"; };
 		4686E47C1CA92B990040CE03 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = public/index.html; sourceTree = "<group>"; };
 		46D77E851CA9A33D007B8435 /* HackathonApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HackathonApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46D77E871CA9A33D007B8435 /* HackathonApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HackathonApp.h; sourceTree = "<group>"; };
-		46D77E891CA9A33D007B8435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46D77E8E1CA9A33D007B8435 /* HackathonAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		46D77E951CA9A33D007B8435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46EB6AFE1CA97FB800EB5D53 /* HackathonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HackathonTests.swift; path = ../HackathonTests/HackathonTests.swift; sourceTree = "<group>"; };
-		46EB6B661CA9811A00EB5D53 /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Routing.swift; path = ../Hackathon/Sources/Routing.swift; sourceTree = "<group>"; };
-		46EB6B681CA9888100EB5D53 /* Slacking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Slacking.swift; path = ../Hackathon/Sources/Slacking.swift; sourceTree = "<group>"; };
+		46D77EB81CA9B2F5007B8435 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		46D77EBA1CA9B57D007B8435 /* Githubing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Githubing.swift; path = Hackathon/Sources/HackathonApp/Githubing.swift; sourceTree = SOURCE_ROOT; };
+		46D77EBB1CA9B57D007B8435 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Hackathon/Sources/HackathonApp/Info.plist; sourceTree = SOURCE_ROOT; };
+		46D77EBC1CA9B57D007B8435 /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Routing.swift; path = Hackathon/Sources/HackathonApp/Routing.swift; sourceTree = SOURCE_ROOT; };
+		46D77EBD1CA9B57D007B8435 /* Slacking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Slacking.swift; path = Hackathon/Sources/HackathonApp/Slacking.swift; sourceTree = SOURCE_ROOT; };
+		46D77EC21CA9B61D007B8435 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/Hackathon/main.swift; sourceTree = "<group>"; };
+		46D77EC81CA9B96F007B8435 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Hackathon/Tests/Hackathon/Info.plist; sourceTree = SOURCE_ROOT; };
+		46D77ECA1CA9B981007B8435 /* HackathonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HackathonTests.swift; path = Hackathon/Tests/HackathonApp/HackathonTests.swift; sourceTree = SOURCE_ROOT; };
+		46D77ECB1CA9B981007B8435 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Hackathon/Tests/HackathonApp/Info.plist; sourceTree = SOURCE_ROOT; };
+		46D77ECE1CA9BB72007B8435 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Hackathon/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,9 +293,9 @@
 		4686E3281CA91DD70040CE03 /* Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				46D77EB81CA9B2F5007B8435 /* Package.swift */,
 				4686E47D1CA92B9E0040CE03 /* public */,
 				4686E4031CA924630040CE03 /* Sources */,
-				4686E32B1CA91DD70040CE03 /* Info.plist */,
 			);
 			path = Hackathon;
 			sourceTree = "<group>";
@@ -299,7 +303,7 @@
 		4686E3331CA91DD70040CE03 /* HackathonTests */ = {
 			isa = PBXGroup;
 			children = (
-				4686E3341CA91DD70040CE03 /* Info.plist */,
+				46D77EC81CA9B96F007B8435 /* Info.plist */,
 			);
 			path = HackathonTests;
 			sourceTree = "<group>";
@@ -334,7 +338,8 @@
 		4686E4031CA924630040CE03 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4686E4011CA9245F0040CE03 /* main.swift */,
+				46D77ECE1CA9BB72007B8435 /* Info.plist */,
+				46D77EC21CA9B61D007B8435 /* main.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -386,10 +391,10 @@
 		46D77E861CA9A33D007B8435 /* HackathonApp */ = {
 			isa = PBXGroup;
 			children = (
-				46EB6B661CA9811A00EB5D53 /* Routing.swift */,
-				46EB6B681CA9888100EB5D53 /* Slacking.swift */,
-				46D77E871CA9A33D007B8435 /* HackathonApp.h */,
-				46D77E891CA9A33D007B8435 /* Info.plist */,
+				46D77EBA1CA9B57D007B8435 /* Githubing.swift */,
+				46D77EBB1CA9B57D007B8435 /* Info.plist */,
+				46D77EBC1CA9B57D007B8435 /* Routing.swift */,
+				46D77EBD1CA9B57D007B8435 /* Slacking.swift */,
 			);
 			path = HackathonApp;
 			sourceTree = "<group>";
@@ -397,8 +402,8 @@
 		46D77E921CA9A33D007B8435 /* HackathonAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				46EB6AFE1CA97FB800EB5D53 /* HackathonTests.swift */,
-				46D77E951CA9A33D007B8435 /* Info.plist */,
+				46D77ECA1CA9B981007B8435 /* HackathonTests.swift */,
+				46D77ECB1CA9B981007B8435 /* Info.plist */,
 			);
 			path = HackathonAppTests;
 			sourceTree = "<group>";
@@ -410,7 +415,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D77E881CA9A33D007B8435 /* HackathonApp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +680,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D77EC91CA9B96F007B8435 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +688,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D77EBF1CA9B57D007B8435 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +696,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D77ECD1CA9B981007B8435 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,7 +707,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4686E4021CA9245F0040CE03 /* main.swift in Sources */,
+				46D77EC31CA9B61D007B8435 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,8 +722,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D77EA31CA9A413007B8435 /* Routing.swift in Sources */,
-				46D77EA41CA9A413007B8435 /* Slacking.swift in Sources */,
+				46D77EC11CA9B57D007B8435 /* Slacking.swift in Sources */,
+				46D77EC01CA9B57D007B8435 /* Routing.swift in Sources */,
+				46D77EBE1CA9B57D007B8435 /* Githubing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,7 +732,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D77EA61CA9A41D007B8435 /* HackathonTests.swift in Sources */,
+				46D77ECC1CA9B981007B8435 /* HackathonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,7 +876,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
-				INFOPLIST_FILE = Hackathon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Hackathon/Sources/Hackathon/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.siejkowski.Hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -881,7 +889,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
-				INFOPLIST_FILE = Hackathon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Hackathon/Sources/Hackathon/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.siejkowski.Hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -894,7 +902,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = HackathonTests/Info.plist;
+				INFOPLIST_FILE = Hackathon/Tests/Hackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.siejkowski.HackathonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -908,7 +916,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = HackathonTests/Info.plist;
+				INFOPLIST_FILE = Hackathon/Tests/Hackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.siejkowski.HackathonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -919,6 +927,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -926,7 +935,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = HackathonApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Hackathon/Sources/HackathonApp/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.siejkowski.HackathonApp;
@@ -942,6 +951,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -949,7 +959,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = HackathonApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Hackathon/Sources/HackathonApp/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.siejkowski.HackathonApp;
@@ -964,8 +974,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = HackathonAppTests/Info.plist;
+				INFOPLIST_FILE = Hackathon/Tests/HackathonApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.siejkowski.HackathonAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -977,8 +988,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = HackathonAppTests/Info.plist;
+				INFOPLIST_FILE = Hackathon/Tests/HackathonApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.siejkowski.HackathonAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1022,6 +1034,7 @@
 				46D77E971CA9A33D007B8435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46D77EA21CA9A33D007B8435 /* Build configuration list for PBXNativeTarget "HackathonAppTests" */ = {
 			isa = XCConfigurationList;
@@ -1030,6 +1043,7 @@
 				46D77E991CA9A33D007B8435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

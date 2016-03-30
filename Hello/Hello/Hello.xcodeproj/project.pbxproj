@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		46E1AABA1CA7FA8100212B2C /* Hello.h in Headers */ = {isa = PBXBuildFile; fileRef = 46E1AAB91CA7FA8100212B2C /* Hello.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46E1AAC11CA7FA8100212B2C /* Hello.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E1AAB61CA7FA8100212B2C /* Hello.framework */; };
-		46E1AAC61CA7FA8100212B2C /* HelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1AAC51CA7FA8100212B2C /* HelloTests.swift */; };
+		46E1AAC61CA7FA8100212B2C /* UploadHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1AAC51CA7FA8100212B2C /* UploadHandlerTests.swift */; };
 		46E1AAF41CA7FB3B00212B2C /* PerfectLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E1AAE31CA7FACC00212B2C /* PerfectLib.framework */; };
 		46E1AAF61CA7FD8700212B2C /* PerfectHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1AAF51CA7FD8700212B2C /* PerfectHandlers.swift */; };
 		46E1AB021CA8759500212B2C /* test.mustache in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46E1AB001CA8739900212B2C /* test.mustache */; };
@@ -87,7 +87,7 @@
 		46E1AAB91CA7FA8100212B2C /* Hello.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hello.h; sourceTree = "<group>"; };
 		46E1AABB1CA7FA8100212B2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E1AAC01CA7FA8100212B2C /* HelloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		46E1AAC51CA7FA8100212B2C /* HelloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloTests.swift; sourceTree = "<group>"; };
+		46E1AAC51CA7FA8100212B2C /* UploadHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadHandlerTests.swift; sourceTree = "<group>"; };
 		46E1AAC71CA7FA8100212B2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E1AADC1CA7FACC00212B2C /* PerfectLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PerfectLib.xcodeproj; path = ../Perfect/PerfectLib/PerfectLib.xcodeproj; sourceTree = "<group>"; };
 		46E1AAE81CA7FADF00212B2C /* PerfectServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PerfectServer.xcodeproj; path = ../Perfect/PerfectServer/PerfectServer.xcodeproj; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		46E1AAC41CA7FA8100212B2C /* HelloTests */ = {
 			isa = PBXGroup;
 			children = (
-				46E1AAC51CA7FA8100212B2C /* HelloTests.swift */,
+				46E1AAC51CA7FA8100212B2C /* UploadHandlerTests.swift */,
 				46E1AAC71CA7FA8100212B2C /* Info.plist */,
 			);
 			path = HelloTests;
@@ -357,7 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E1AAC61CA7FA8100212B2C /* HelloTests.swift in Sources */,
+				46E1AAC61CA7FA8100212B2C /* UploadHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +544,7 @@
 				46E1AACC1CA7FA8100212B2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46E1AACD1CA7FA8100212B2C /* Build configuration list for PBXNativeTarget "HelloTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +553,7 @@
 				46E1AACF1CA7FA8100212B2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,3 +1,6 @@
+import KituraSys
+import KituraNet
+import Kitura
 import FluentSQLite
 import Fluent
 #if os(Linux)
@@ -34,18 +37,6 @@ struct Note : Model {
     }
 }
 
-let note = Note(content: "note \(random())")
-note.save()
-
-print(Query<Note>().results)
-
-print("elo")
-
-//Log.logger = HeliumLogger()
-//connectToDatabase { database in
-//    let router = provideRouter(database)
-//
-//    let server = HttpServer.listen(8080, delegate: router)
-//
-//    Server.run()
-//}
+let router = provideRouter()
+let server = HttpServer.listen(8080, delegate: router)
+Server.run()

@@ -13,14 +13,16 @@ class APIClient {
         self.configuration = configuration
     }
     
-    func fetchAllData(callback: (Array<String>) -> ()) {
+    func fetchAllData(callback: ([(String, String)]) -> ()) {
         guard let request = requestWithPath("/users") else { return }
         request.HTTPMethod = "GET"
         performRequest(request) { data, response, error in
             if let data = data,
-               let json = try! NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? Array<String> {
+                let json = try! NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [[String : String]] {
                 dispatch_async(dispatch_get_main_queue()) {
-                    callback(json)
+                    let tuples = json.filter { $0.first != nil }
+                                    .map { ($0.first!.0, $0.first!.1) }
+                    callback(tuples)
                 }
             }
         }
@@ -41,7 +43,7 @@ class APIClient {
         }
     }
     
-    func removeData(id: Int, callback: () -> ()) {
+    func removeData(id: String, callback: () -> ()) {
         guard let request = requestWithPath("/user/\(id)") else { return }
         request.HTTPMethod = "DELETE"
         performRequest(request) { data, response, error in

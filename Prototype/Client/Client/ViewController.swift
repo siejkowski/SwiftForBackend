@@ -4,11 +4,11 @@ class DataSourceDelegate : NSObject, UITableViewDataSource, UITableViewDelegate 
     
     let identifier = "identifier"
     
-    var deleteCallback: (NSIndexPath, () -> ()) -> () = { _, _ in return }
+    var deleteCallback: (String, () -> ()) -> () = { _, _ in return }
     
-    var data: [String] = []
+    var data: [(String, String)] = []
     
-    func register(tableView: UITableView, deleteCallback: (NSIndexPath, () -> ()) -> ()) {
+    func register(tableView: UITableView, deleteCallback: (String, () -> ()) -> ()) {
         self.deleteCallback = deleteCallback
         tableView.delegate = self
         tableView.dataSource = self
@@ -29,12 +29,13 @@ class DataSourceDelegate : NSObject, UITableViewDataSource, UITableViewDelegate 
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier) ?? UITableViewCell()
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = data[indexPath.row].1
         return cell
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        self.deleteCallback(indexPath) {
+        let id = self.data[indexPath.row].0
+        self.deleteCallback(id) {
             self.data.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         }
@@ -86,9 +87,9 @@ class ViewController: UITableViewController {
         self.navigationItem.title = "Notes"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(ViewController.addNote))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: #selector(ViewController.removeNote))
-        self.dataSourceDelegate.register(self.tableView) { [weak self] indexPath, callback in
+        self.dataSourceDelegate.register(self.tableView) { [weak self] id, callback in
             guard let `self` = self else { return }
-            self.apiClient.removeData(indexPath.row) { [weak self] in
+            self.apiClient.removeData(id) { [weak self] in
                 callback()
                 self?.tableView.setEditing(false, animated: true)
                 self?.refreshData()

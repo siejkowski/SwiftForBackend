@@ -27,37 +27,27 @@ func provideRouter() -> Router {
         response.send(id ?? "not found").status(HttpStatusCode.OK).forceEnd()
     }
     .get("/user/:id?") { (request: RouterRequest, response: RouterResponse, next) in
-        let results = Query<Note>().results
         guard let maybeId = request.params["id"],
-              let id = Int(maybeId) else {
+              let id = Int(maybeId),
+              let note = Query<Note>().find(id) else {
             response.send("id is required").status(HttpStatusCode.BAD_REQUEST).forceEnd()
             return
         }
-        guard results.count > id else {
-            response.send("id outside range").status(HttpStatusCode.BAD_REQUEST).forceEnd()
-            return
-        }
-        let note = Query<Note>().results[id]
         response.send(note.content).status(HttpStatusCode.OK).forceEnd()
     }
     .delete("/user/:id?") { (request: RouterRequest, response: RouterResponse, next) in
-        let results = Query<Note>().results
         guard let maybeId = request.params["id"],
-              let id = Int(maybeId) else {
+              let id = Int(maybeId),
+              let note = Query<Note>().find(id) else {
             response.send("id is required").status(HttpStatusCode.BAD_REQUEST).forceEnd()
             return
         }
-        guard results.count > id else {
-            response.send("id outside range").status(HttpStatusCode.BAD_REQUEST).forceEnd()
-            return
-        }
-        let note = Query<Note>().results[id]
         note.delete()
         response.status(HttpStatusCode.OK).forceEnd()
     }
     .get("/users") { (request: RouterRequest, response: RouterResponse, next) in
         let results = Query<Note>().results
-        let contentsString = results.map { note in note.content }
+        let contentsString : [[String:String]] = results.map { note in [note.id ?? "0" : note.content] }
         let contents = contentsString.map { content in JSON(content) }
         response.sendJson(JSON(contents)).status(HttpStatusCode.OK).forceEnd()
     }

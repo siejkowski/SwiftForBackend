@@ -17,6 +17,12 @@ import HackathonApp
 
 class HackathonTests: XCTestCase {
     
+    static var allTests : [(String, HackathonTests -> () throws -> Void)] {
+        return [
+            ("testHelloPath", testHelloPath)
+        ]
+    }   
+    
     var router: Router?
     
     override func setUp() {

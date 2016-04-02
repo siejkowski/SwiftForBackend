@@ -8,7 +8,7 @@ public class SlackClient {
 
     private let headers: Headers = ["Content-Type": "application/x-www-form-urlencoded"]
     
-    private let slackToken = "xoxb-29685368228-tkILhjUEkq3F6qSBahe0Kw1W"
+    private let slackToken = "INSERT_YOUR_SLACK_API_TOKEN_HERE"
     
     private let rtmAPIPath = "/api/rtm.start"
     
@@ -85,7 +85,7 @@ public class SlackClient {
     
     private func postMessage(channel: String, text: String) {
         do {
-            try self.client.post("/api/chat.postMessage", headers: headers, body: "token=xoxb-29685368228-tkILhjUEkq3F6qSBahe0Kw1W&channel=\(channel)&text=\(text)")
+            try self.client.post("/api/chat.postMessage", headers: headers, body: "token=\(slackToken)&channel=\(channel)&text=\(text)")
         } catch {}
     }
 
